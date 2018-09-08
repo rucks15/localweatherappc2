@@ -1,8 +1,8 @@
-<div>
+<div *ngIf="current">
   <div>
 <span>{{current.city}},{{current.country}}</span>
   </div>
-  <div>
+  <div *ngIf="current">
 <span>{{current.date|date:'fullDate'}},</span>
   </div>
   <div>

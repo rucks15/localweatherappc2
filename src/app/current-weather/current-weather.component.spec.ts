@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CurrentWeatherComponent } from './current-weather.component';
+import { WeatherService } from '../weather/weather.service';
 
 describe('CurrentWeatherComponent', () => {
   let component: CurrentWeatherComponent;
@@ -8,7 +9,8 @@ describe('CurrentWeatherComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CurrentWeatherComponent ]
+      declarations: [ CurrentWeatherComponent ],
+      providers: [ WeatherService ]
     })
     .compileComponents();
   }));
@@ -19,7 +21,7 @@ describe('CurrentWeatherComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should be created', () => {
     expect(component).toBeTruthy();
   });
 });
