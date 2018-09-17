@@ -8,7 +8,7 @@
 <div style="text-align:center">
 <h2>Hello there! Here is current weather</h2>
 <div>
-  <app-city-search></app-city-search>
+  <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
 </div>
-<app-current-weather></app-current-weather>
+<app-current-weather [current] = "currentWeather"></app-current-weather>
 </div>
