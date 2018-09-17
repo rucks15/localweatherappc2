@@ -1,5 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { FormControl, Validator, Validators } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { WeatherService } from '../weather/weather.service';
 import { debounceTime } from 'rxjs/operators';
 

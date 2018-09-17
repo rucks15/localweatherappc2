@@ -1,14 +1,13 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
-  <h1>
+  <mat-toolbar color = "primary">
     Welcome to {{ title }}!
-  </h1>
-  
-</div>
-<div style="text-align:center">
-<h2>Hello there! Here is current weather</h2>
-<div>
-  <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
-</div>
-<app-current-weather [current] = "currentWeather"></app-current-weather>
+  </mat-toolbar>
+  <h2>Enter city name, country or zip code!</h2>
+  <div fxLayoutAlign="center">
+    <app-city-search (searchEvent)="doSearch($event)"></app-city-search>
+  </div>
+  <mat-card>
+    <app-current-weather [current] = "currentWeather"></app-current-weather>
+  </mat-card>
 </div>
