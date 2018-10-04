@@ -9,6 +9,7 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./city-search.component.css']
 })
 export class CitySearchComponent implements OnInit {
+  [x: string]: any;
   search = new FormControl('',[Validators.minLength(3)])
   @Output() searchEvent = new EventEmitter<string>();
   constructor(private weatherService:WeatherService) { }
